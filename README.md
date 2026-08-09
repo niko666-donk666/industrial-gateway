@@ -39,7 +39,6 @@ STM32 FreeRTOS任务：
 - STM32 Keil工程：`MDK-ARM/industrial_gateway.uvprojx`
 - ESP-IDF工程：`esp32_gateway/`
 - 协议说明：`docs/串口与MQTT协议_v1.0.md`
-- 待测试流程：`docs/预备实现_v0.6_RS485_WiFi_MQTT.md`
 - 看门狗与浅睡眠：`docs/设计与实验流程_v0.7_看门狗与安全浅睡眠.md`
 - 实验记录索引：`docs/实验记录索引.md`
 - Modbus RTU端到端成功记录：`docs/实验记录_v0.9_Modbus_RTU端到端读取成功.md`
@@ -56,8 +55,8 @@ STM32 FreeRTOS任务：
 ESP-IDF: Build, Flash and Monitor your Device
 ```
 
-## 当前边界
+## 版本范围
 
-FreeRTOS迁移、UART双向ACK、传感器采集、RS485/Modbus主站、Wi-Fi/MQTT以及Qt上位机均已完成端到端实机验证，并形成正常状态、断线状态和自动恢复状态的证据链。
+FreeRTOS任务化、UART双向ACK、传感器采集、RS485/Modbus主站、Wi-Fi/MQTT以及Qt上位机均已完成端到端实机验证，并形成正常、断线和自动恢复三类实验证据。
 
-当前原型能够完成“现场采集—本地显示—工业总线—无线传输—PC可视化”的完整闭环。更长时间稳定性、启动瞬态、测量精度对比和执行器闭环控制仍可继续补充；继电器/MOSFET、外壳、PCB、离线存储和有线以太网暂未纳入当前版本。
+本版本实现“现场采集—本地显示—工业总线—无线传输—PC可视化”完整闭环。仓库范围限定为面包板原型与运维监控功能，不包含执行器控制、定制PCB、外壳、离线存储和有线以太网。
