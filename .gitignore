@@ -1,0 +1,46 @@
+# Local tools and machine-specific configuration.
+.agents/
+.clangd
+.vscode/
+*.user
+*.user.*
+.qtcreator/
+.qtcreator-old-path/
+
+# ESP-IDF local configuration may contain Wi-Fi/MQTT credentials.
+esp32_gateway/sdkconfig
+esp32_gateway/sdkconfig.old
+esp32_rs485_loopback_test/sdkconfig
+esp32_rs485_loopback_test/sdkconfig.old
+
+# Generated ESP-IDF output and migrated-path caches.
+esp32_gateway/build/
+esp32_gateway/build-*/
+esp32_rs485_loopback_test/build/
+
+# Generated Qt/CMake output.
+qt_upper_computer/build/
+qt_upper_computer/.qtcreator/
+qt_upper_computer/.qtcreator-old-path/
+qt_upper_computer/CMakeLists.txt.user*
+
+# Generated STM32/Keil output. Keep the Keil project files themselves.
+MDK-ARM/Objects/
+MDK-ARM/Listings/
+MDK-ARM/*.uvguix.*
+*.o
+*.d
+*.axf
+*.hex
+*.map
+*.lst
+*.lnp
+*.dep
+*.build_log.htm
+
+# Generic temporary files.
+*.tmp
+*.bak
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,32 @@
+menu "Industrial gateway network configuration"
+
+config GATEWAY_WIFI_SSID
+    string "Wi-Fi SSID"
+    default ""
+
+config GATEWAY_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+
+config GATEWAY_MQTT_BROKER_URI
+    string "MQTT broker URI"
+    default "mqtt://192.168.1.100"
+
+config GATEWAY_MQTT_USERNAME
+    string "MQTT username (optional)"
+    default ""
+
+config GATEWAY_MQTT_PASSWORD
+    string "MQTT password (optional)"
+    default ""
+
+config GATEWAY_DEVICE_ID
+    string "Gateway device ID"
+    default "industrial-gateway-001"
+
+config GATEWAY_MQTT_QOS
+    int "MQTT QoS"
+    range 0 1
+    default 1
+
+endmenu

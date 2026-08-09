@@ -1,0 +1,238 @@
+PS C:\industrial_gateway\esp32_gateway> $env:IDF_PATH = 'C:/esp/esp-idf-v5.2.7/Espressif/frameworks/esp-idf-v5.2.7/';
+PS C:\industrial_gateway\esp32_gateway>  & 'C:\esp\esp-idf-v5.2.7\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe' 'C:\esp\esp-idf-v5.2.7\Espressif\frameworks\esp-idf-v5.2.7\tools\idf_monitor.py' -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make '''C:\esp\esp-idf-v5.2.7\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe'' ''C:\esp\esp-idf-v5.2.7\Espressif\frameworks\esp-idf-v5.2.7\tools\idf.py''' --target esp32 'c:\industrial_gateway\esp32_gateway\build\esp32_gateway.elf'
+--- Warning: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM3 instead...
+--- esp-idf-monitor 1.9.0 on \\.\COM3 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0x�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15632
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+--- 0x40080400: _init at ??:?
+load:0x40080404,len:3904
+entry 0x40080640
+I (31) boot: ESP-IDF v5.2.7-dirty 2nd stage bootloader
+I (31) boot: compile time Aug  8 2026 19:50:45
+I (31) boot: Multicore bootloader
+I (36) boot: chip revision: v3.1
+I (40) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 2MB
+I (53) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (85) boot:  2 factory          factory app      00 00 00010000 00100000
+I (92) boot: End of partition table
+I (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f888h (129160) map
+I (149) esp_image: segment 1: paddr=0002f8b0 vaddr=3ffb0000 size=00768h (  1896) load
+I (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0760h (657248) map
+I (380) esp_image: segment 3: paddr=000d0788 vaddr=3ffb0768 size=039f4h ( 14836) load
+I (386) esp_image: segment 4: paddr=000d4184 vaddr=40080000 size=18494h ( 99476) load
+I (437) boot: Loaded app from partition at offset 0x10000
+I (437) boot: Disabling RNG early entropy source...
+I (449) cpu_start: Multicore app
+I (458) cpu_start: Pro cpu start user code
+I (458) cpu_start: cpu freq: 160000000 Hz
+I (458) cpu_start: Application information:
+I (461) cpu_start: Project name:     esp32_gateway
+I (467) cpu_start: App version:      1
+I (471) cpu_start: Compile time:     Aug  8 2026 19:50:20
+I (477) cpu_start: ELF file SHA256:  4b20d5e09...
+I (482) cpu_start: ESP-IDF:          v5.2.7-dirty
+I (488) cpu_start: Min chip rev:     v0.0
+I (492) cpu_start: Max chip rev:     v3.99 
+I (497) cpu_start: Chip rev:         v3.1
+I (502) heap_init: Initializing. RAM available for dynamic allocation:
+I (509) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (515) heap_init: At 3FFB8A38 len 000275C8 (157 KiB): DRAM
+I (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (534) heap_init: At 40098494 len 00007B6C (30 KiB): IRAM
+I (542) spi_flash: detected chip: generic
+I (545) spi_flash: flash io: dio
+W (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (563) main_task: Started on CPU0
+I (573) main_task: Calling app_main()
+I (573) gateway: Reset reason=1
+I (593) gateway: Gateway UART ready: RX=GPIO16, TX=GPIO17, 115200 8N1
+I (603) wifi:wifi driver task: 3ffc1220, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ff41b26
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (633) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+I (643) wifi_init: rx ba win: 6
+I (653) wifi_init: tcpip mbox: 32
+I (653) wifi_init: udp mbox: 6
+I (653) wifi_init: tcp mbox: 6
+I (663) wifi_init: tcp tx win: 5760
+I (663) wifi_init: tcp rx win: 5760
+I (673) wifi_init: tcp mss: 1440
+I (673) wifi_init: WiFi IRAM OP enabled
+I (673) wifi_init: WiFi RX IRAM OP enabled
+I (683) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+I (773) wifi:mode : sta (b0:cb:d8:7d:91:60)
+I (773) wifi:enable tsf
+I (773) wifi:Set ps type: 1, coexist: 0
+
+I (773) gateway: Wi-Fi power save: MIN_MODEM
+E (783) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0
+E (793) transport_base: Failed to open a new connection: 32769
+I (793) wifi:E (793) mqtt_client: Error transport connect
+new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+E (803) gateway: MQTT error
+I (803) wifi:W (803) gateway: MQTT disconnected
+state: init -> auth (b0)
+I (793) main_task: Returned from app_main()
+I (1813) wifi:state: auth -> init (200)
+I (1833) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+W (1833) gateway: Wi-Fi disconnected; reconnecting
+W (4253) gateway: Wi-Fi disconnected; reconnecting
+I (4323) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4323) wifi:state: init -> auth (b0)
+I (4333) wifi:state: auth -> assoc (0)
+I (4353) wifi:state: assoc -> run (10)
+I (4373) wifi:connected with 3-501-5-3, aid = 7, channel 11, BW20, bssid = a4:b6:1e:07:83:04
+I (4373) wifi:security: WPA2-PSK, phy: bgn, rssi: -33, cipher(pairwise:0x3, group:0x3), pmf:0
+I (4383) wifi:pm start, type: 1
+
+I (4383) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4423) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (5393) esp_netif_handlers: sta ip: 192.168.3.123, mask: 255.255.255.0, gw: 192.168.3.1
+I (5393) gateway: Wi-Fi connected, IP=192.168.3.123
+I (11283) wifi:<ba-add>idx:0 (ifx:0, a4:b6:1e:07:83:04), tid:0, ssn:1, winSize:64
+I (11803) gateway: MQTT connected
+
+PS C:\industrial_gateway\esp32_gateway> 
+PS C:\industrial_gateway\esp32_gateway> 
+PS C:\industrial_gateway\esp32_gateway> $env:IDF_PATH = 'C:/esp/esp-idf-v5.2.7/Espressif/frameworks/esp-idf-v5.2.7/';
+PS C:\industrial_gateway\esp32_gateway>  & 'C:\esp\esp-idf-v5.2.7\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe' 'C:\esp\esp-idf-v5.2.7\Espressif\frameworks\esp-idf-v5.2.7\tools\idf_monitor.py' -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make '''C:\esp\esp-idf-v5.2.7\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe'' ''C:\esp\esp-idf-v5.2.7\Espressif\frameworks\esp-idf-v5.2.7\tools\idf.py''' --target esp32 'c:\industrial_gateway\esp32_gateway\build\esp32_gateway.elf'
+--- Warning: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM3 instead...
+--- esp-idf-monitor 1.9.0 on \\.\COM3 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0x�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15632
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+--- 0x40080400: _init at ??:?
+load:0x40080404,len:3904
+entry 0x40080640
+I (31) boot: ESP-IDF v5.2.7-dirty 2nd stage bootloader
+I (31) boot: compile time Aug  8 2026 19:50:45
+I (31) boot: Multicore bootloader
+I (36) boot: chip revision: v3.1
+I (40) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 2MB
+I (53) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (85) boot:  2 factory          factory app      00 00 00010000 00100000
+I (92) boot: End of partition table
+I (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f978h (129400) map
+I (149) esp_image: segment 1: paddr=0002f9a0 vaddr=3ffb0000 size=00678h (  1656) load
+I (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a07d8h (657368) map
+I (380) esp_image: segment 3: paddr=000d0800 vaddr=3ffb0678 size=03ae4h ( 15076) load
+I (386) esp_image: segment 4: paddr=000d42ec vaddr=40080000 size=18494h ( 99476) load
+I (437) boot: Loaded app from partition at offset 0x10000
+I (437) boot: Disabling RNG early entropy source...
+I (449) cpu_start: Multicore app
+I (458) cpu_start: Pro cpu start user code
+I (458) cpu_start: cpu freq: 160000000 Hz
+I (458) cpu_start: Application information:
+I (461) cpu_start: Project name:     esp32_gateway
+I (467) cpu_start: App version:      1
+I (471) cpu_start: Compile time:     Aug  8 2026 19:50:20
+I (477) cpu_start: ELF file SHA256:  aba4f2a91...
+I (483) cpu_start: ESP-IDF:          v5.2.7-dirty
+I (488) cpu_start: Min chip rev:     v0.0
+I (493) cpu_start: Max chip rev:     v3.99 
+I (498) cpu_start: Chip rev:         v3.1
+I (503) heap_init: Initializing. RAM available for dynamic allocation:
+I (510) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (516) heap_init: At 3FFB8A40 len 000275C0 (157 KiB): DRAM
+I (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (535) heap_init: At 40098494 len 00007B6C (30 KiB): IRAM
+I (542) spi_flash: detected chip: generic
+I (545) spi_flash: flash io: dio
+W (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (563) main_task: Started on CPU0
+I (573) main_task: Calling app_main()
+I (573) gateway: Reset reason=1
+I (593) gateway: Gateway UART ready: RX=GPIO16, TX=GPIO17, 115200 8N1
+I (603) wifi:wifi driver task: 3ffc12ac, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ff41b26
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (633) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+I (643) wifi_init: rx ba win: 6
+I (653) wifi_init: tcpip mbox: 32
+I (653) wifi_init: udp mbox: 6
+I (653) wifi_init: tcp mbox: 6
+I (663) wifi_init: tcp tx win: 5760
+I (663) wifi_init: tcp rx win: 5760
+I (673) wifi_init: tcp mss: 1440
+I (673) wifi_init: WiFi IRAM OP enabled
+I (673) wifi_init: WiFi RX IRAM OP enabled
+I (683) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+I (773) wifi:mode : sta (b0:cb:d8:7d:91:60)
+I (773) wifi:enable tsf
+I (773) wifi:Set ps type: 1, coexist: 0
+
+I (783) gateway: Wi-Fi power save: MIN_MODEM
+I (783) gateway: MQTT client initialized; waiting for Wi-Fi IP address
+I (783) main_task: Returned from app_main()
+I (793) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (793) wifi:state: init -> auth (b0)
+I (1803) wifi:state: auth -> init (200)
+I (1813) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+W (1813) gateway: Wi-Fi disconnected; reconnecting
+W (4233) gateway: Wi-Fi disconnected; reconnecting
+I (4243) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4243) wifi:state: init -> auth (b0)
+I (4253) wifi:state: auth -> assoc (0)
+I (4263) wifi:state: assoc -> run (10)
+I (4283) wifi:connected with 3-501-5-3, aid = 7, channel 11, BW20, bssid = a4:b6:1e:07:83:04
+I (4283) wifi:security: WPA2-PSK, phy: bgn, rssi: -35, cipher(pairwise:0x3, group:0x3), pmf:0
+I (4293) wifi:pm start, type: 1
+
+I (4293) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4303) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (5313) esp_netif_handlers: sta ip: 192.168.3.123, mask: 255.255.255.0, gw: 192.168.3.1
+I (5313) gateway: Wi-Fi connected, IP=192.168.3.123
+I (5313) gateway: MQTT client started after Wi-Fi obtained an IP address
+I (5603) wifi:<ba-add>idx:0 (ifx:0, a4:b6:1e:07:83:04), tid:0, ssn:1, winSize:64
+I (5943) gateway: MQTT connected
