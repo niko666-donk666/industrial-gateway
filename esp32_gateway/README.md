@@ -46,5 +46,3 @@ industrial_gateway/<device-id>/modbus
 - 启动日志输出ESP32复位原因，便于区分上电、软件复位和看门狗复位；
 - Wi-Fi启动后使用`WIFI_PS_MIN_MODEM`，在维持Station及MQTT连接的前提下降低无线空闲功耗；
 - 本方案不使用Light-sleep/Deep-sleep，避免UART心跳、MQTT连接和在线状态被睡眠流程破坏。
-
-设计与实测步骤见`../docs/设计与实验流程_v0.7_看门狗与安全浅睡眠.md`。
